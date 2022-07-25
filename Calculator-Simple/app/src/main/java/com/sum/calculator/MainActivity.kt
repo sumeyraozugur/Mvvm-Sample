@@ -16,8 +16,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var number1: Int? = null
     private var number2: Int? = null
     private var result: Int? = null
-    private var isCheck: Boolean = true
+
     private lateinit var toastMessage: String
+
+    companion object{
+        private var isCheck: Boolean = true
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
