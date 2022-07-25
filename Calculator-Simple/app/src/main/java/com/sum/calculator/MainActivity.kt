@@ -1,6 +1,7 @@
 package com.sum.calculator
 
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -45,18 +46,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.changeTheme-> changeTheme(isCheck)
-
+            R.id.changeTheme -> changeTheme()
         }
+
+        Log.v("ChangeTheme", isCheck.toString())
+
         return super.onOptionsItemSelected(item)
     }
 
     override fun onClick(view: View?) {
         when (view?.id) {
-            R.id.btnSum-> sumNumbers()
-            R.id.btnSub-> subNumbers()
-            R.id.btnMulti-> multiNumbers()
-            R.id.btnDiv-> divNumbers()
+            R.id.btnSum -> sumNumbers()
+            R.id.btnSub -> subNumbers()
+            R.id.btnMulti -> multiNumbers()
+            R.id.btnDiv -> divNumbers()
 
 
         }
@@ -73,7 +76,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
         } else {
             result = (number1!! + number2!!)
-            binding.textResult.text= result.toString()
+            binding.textResult.text = result.toString()
         }
 
     }
@@ -85,7 +88,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
         } else {
             result = (number1!! - number2!!)
-            binding.textResult.text= result.toString()
+            binding.textResult.text = result.toString()
         }
 
     }
@@ -98,7 +101,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
         } else {
             result = (number1!! * number2!!)
-            binding.textResult.text= result.toString()
+            binding.textResult.text = result.toString()
         }
 
     }
@@ -111,13 +114,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
         } else {
             result = (number1!! / number2!!)
-            binding.textResult.text= result.toString()
+            binding.textResult.text = result.toString()
         }
 
     }
 
-    private fun changeTheme(isChecked: Boolean) {
-        isCheck = if (isChecked) {
+    private fun changeTheme() {
+        isCheck = if (isCheck ) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             false
         } else {
