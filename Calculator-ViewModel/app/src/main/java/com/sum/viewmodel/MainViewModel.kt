@@ -1,25 +1,26 @@
 package com.sum.viewmodel
 
-
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainViewModel:ViewModel() {
 
-    var result = "0"
+    var result = MutableLiveData<String>()
+    var isCheck =MutableLiveData<Boolean>()
 
-
-    companion object{
-        var isCheck:Boolean = true
-
+    init {
+        isCheck = MutableLiveData<Boolean>(true)
     }
+
+
 
 
     fun sum(number1:String,number2:String){
         val num1 = number1.toInt()
         val num2 = number2.toInt()
         val sum = num1 +num2
-        result = sum.toString()
+        result.value= sum.toString()
 
     }
 
@@ -27,7 +28,7 @@ class MainViewModel:ViewModel() {
         val num1 = number1.toInt()
         val num2 = number2.toInt()
         val sum = num1-num2
-        result = sum.toString()
+        result.value= sum.toString()
 
     }
 
@@ -35,7 +36,7 @@ class MainViewModel:ViewModel() {
         val num1 = number1.toInt()
         val num2 = number2.toInt()
         val sum = num1 *num2
-        result = sum.toString()
+        result.value= sum.toString()
 
     }
 
@@ -43,12 +44,12 @@ class MainViewModel:ViewModel() {
         val num1 = number1.toInt()
         val num2 = number2.toInt()
         val sum = num1/num2
-        result = sum.toString()
+        result.value= sum.toString()
 
     }
 
     fun checkThem(){
-        isCheck = if (isCheck) {
+        isCheck.value= if (isCheck.value==true) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             false
         } else {

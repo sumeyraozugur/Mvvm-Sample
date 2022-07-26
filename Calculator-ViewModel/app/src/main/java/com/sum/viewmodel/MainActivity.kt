@@ -26,7 +26,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(view)
 
         toastMessage = "Enter Numbers!!!"
-        binding.textResult.text = viewModel.result
+
+
+        viewModel.result.observe(this) {
+            binding.textResult.text = it
+
+        }
 
 
         binding.btnSum.setOnClickListener(this)
@@ -46,8 +51,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when (item.itemId) {
             R.id.changeTheme -> changeTheme()
         }
-
-
         return super.onOptionsItemSelected(item)
     }
 
@@ -70,7 +73,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
         } else {
             viewModel.sum(number1.toString(), number2.toString())
-            binding.textResult.text = viewModel.result
+
         }
 
     }
@@ -82,7 +85,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
         } else {
             viewModel.sub(number1.toString(), number2.toString())
-            binding.textResult.text = viewModel.result
+
         }
 
     }
@@ -95,7 +98,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
         } else {
             viewModel.multi(number1.toString(), number2.toString())
-            binding.textResult.text = viewModel.result
+
         }
 
     }
@@ -108,7 +111,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
         } else {
             viewModel.div(number1.toString(), number2.toString())
-            binding.textResult.text = viewModel.result
+
         }
 
     }
