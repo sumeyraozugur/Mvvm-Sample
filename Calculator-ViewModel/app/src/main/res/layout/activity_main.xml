@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSum"
+        android:text="+"
+        app:layout_constraintEnd_toStartOf="@+id/btnSub"
+        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnSub"
+        style="@style/Button_Style" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSub"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="100dp"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNumber2"
+        style="@style/Button_Style"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMulti"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="128dp"
+        android:text="*"
+        app:layout_constraintEnd_toEndOf="@+id/btnDiv"
+        app:layout_constraintTop_toBottomOf="@+id/btnSub"
+        style="@style/Button_Style"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDiv"
+        android:layout_marginEnd="100dp"
+        android:text="/"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMulti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnMulti"
+        app:layout_constraintVertical_bias="0.0"
+        style="@style/Button_Style"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editNumber1"
+        android:layout_marginTop="40dp"
+        android:hint="First Number:"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textResult"
+        style="@style/Edit_Number" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editNumber2"
+        android:layout_marginTop="16dp"
+        android:hint="Second Number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNumber1"
+        style="@style/Edit_Number"/>
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:text="Result: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
