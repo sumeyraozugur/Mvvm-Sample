@@ -1,11 +1,11 @@
-<h1 align="center">:jack_o_lantern: Mvvm Sample :fireworks: </h1>
+<h1 align="center">:bomb: Mvvm Sample :sweat_drops: </h1>
 
 - [Basic Calculator](#1)
 - [Calculator with View Model](#2)
 - [Calculator with Live Data](#3)
 - [Calculator with Repo](#4)
 
-<h2 align="center">:jack_o_lantern: Basic Calculator :fireworks: </h2>
+ <a name="1"></a> <h2 align="center">:orange_heart: Basic Calculator :heartpulse: </h2>
 
 ```Kotlin
 
@@ -83,8 +83,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
 
 ```
+ 
 
-<h2 align="center">:jack_o_lantern: Calculator with View Model :fireworks: </h2>
+<a name="2"></a><h2 align="center">:orange_heart: Calculator with View Model :heartpulse: </h2>
 
 
 ```Kotlin
@@ -191,8 +192,7 @@ class MainViewModel:ViewModel() {
 
 
 
-
-<h2 align="center">:jack_o_lantern: Calculator with Live Data :fireworks: </h2>
+ <a name="3"></a><h2 align="center">:orange_heart:  Calculator with Live Data  :heartpulse:  </h2>
 
 
 ```Kotlin
@@ -297,7 +297,7 @@ class MainViewModel:ViewModel() {
 
 ```
 
-<h2 align="center">:jack_o_lantern: Calculator with Repo :fireworks: </h2>
+<a name="4"></a><h2 align="center">:orange_heart: Calculator with Repo  :heartpulse:  </h2>
 
 
 ```Kotlin
