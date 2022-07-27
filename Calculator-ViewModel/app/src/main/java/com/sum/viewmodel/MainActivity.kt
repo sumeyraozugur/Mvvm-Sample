@@ -120,6 +120,4 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         viewModel.checkThem()
 
     }
-
-
 }

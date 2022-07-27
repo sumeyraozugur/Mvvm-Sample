@@ -12,16 +12,13 @@ import com.sum.calculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityMainBinding
-
     private var number1: Int? = null
     private var number2: Int? = null
     private var result: Int? = null
-
     private lateinit var toastMessage: String
 
     companion object{
         private var isCheck: Boolean = true
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,18 +27,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val view = binding.root
         setContentView(view)
 
-
         toastMessage = "Enter Numbers!!!"
-
-
-
 
         binding.btnSum.setOnClickListener(this)
         binding.btnSub.setOnClickListener(this)
         binding.btnMulti.setOnClickListener(this)
         binding.btnDiv.setOnClickListener(this)
-
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -53,9 +44,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when (item.itemId) {
             R.id.changeTheme -> changeTheme()
         }
-
         Log.v("ChangeTheme", isCheck.toString())
-
         return super.onOptionsItemSelected(item)
     }
 
@@ -65,25 +54,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btnSub -> subNumbers()
             R.id.btnMulti -> multiNumbers()
             R.id.btnDiv -> divNumbers()
-
-
         }
-
     }
 
     private fun sumNumbers() {
-
         number1 = binding.editNumber1.text.toString().toIntOrNull()
         number2 = binding.editNumber2.text.toString().toIntOrNull()
-
-
         if (number1 == null || number2 == null) {
             Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
         } else {
             result = (number1!! + number2!!)
             binding.textResult.text = result.toString()
         }
-
     }
 
     private fun subNumbers() {
@@ -95,33 +77,28 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             result = (number1!! - number2!!)
             binding.textResult.text = result.toString()
         }
-
     }
 
     private fun multiNumbers() {
         number1 = binding.editNumber1.text.toString().toIntOrNull()
         number2 = binding.editNumber2.text.toString().toIntOrNull()
-
         if (number1 == null || number2 == null) {
             Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
         } else {
             result = (number1!! * number2!!)
             binding.textResult.text = result.toString()
         }
-
     }
 
     private fun divNumbers() {
         number1 = binding.editNumber1.text.toString().toIntOrNull()
         number2 = binding.editNumber2.text.toString().toIntOrNull()
-
         if (number1 == null || number2 == null) {
             Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
         } else {
             result = (number1!! / number2!!)
             binding.textResult.text = result.toString()
         }
-
     }
 
     private fun changeTheme() {
@@ -132,9 +109,5 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             true
         }
-
-
     }
-
-
 }
