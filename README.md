@@ -88,6 +88,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
 - ``` isCheck ``` should be static. İf yo don't  put  this  value static, you should click change theme part twice. 
 - I define these variable in main activity. So You don't need define these again in functions. 
+- <b>  Static variables </b> are created as soon as the project starts running and continue to run until the program terminates.The situation is different when creating the object. Occurs when the object is called and then it is deleted by garbage collector.
+- :bangbang: <b>  Static variables  </b>  are not suitable for object oriented programming. Also it  increases addictions.
  
 
 <a name="2"></a><h2 align="center">:orange_heart: Calculator with View Model :heartpulse: </h2>
@@ -311,8 +313,9 @@ class MainViewModel:ViewModel() {
 
 #### What is the difference between LiveData and MutableLiveData?
 
-- LiveData is immutable while MutableLiveData is mutable so we can observe and set the values using postValue() and setValue() methods in MutableLiveData.
--  In init function, you can initialize these values.
+- LiveData is immutable while MutableLiveData is mutable. So we can observe and set the values using postValue() and setValue() methods in MutableLiveData. Namely when you don't want your data to be modified use LiveData If you want to modify your data later use MutableLiveData.
+- MutableLİveData is a subclass of LiveData. 
+- In init function, you can initialize these values.
 - Cause you are using live data, you can observe this data
 - In here, you start to use  `` .value  ``
 
