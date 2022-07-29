@@ -462,4 +462,9 @@ class Repository {
 
 - Repo connects with ViewModel, ViewModel connect with (Activity or Fragment)
 
+###  :heartpulse: Output  :heartpulse:
+
+![output](https://user-images.githubusercontent.com/41166029/181833381-bee68807-de39-46f0-8ece-090637a12d80.gif)
+
+
 
