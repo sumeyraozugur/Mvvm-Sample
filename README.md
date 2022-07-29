@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
 ```
 
-### Notes
+### :fire: Notes
 
 - ``` isCheck ``` should be static. İf yo don't  put  this  value static, you should click change theme part twice. 
 - I define these variable in main activity. So You don't need define these again in functions. 
@@ -195,7 +195,7 @@ class MainViewModel:ViewModel() {
 
 ```
 
-### Notes
+###  :fire:Notes
 
 - ViewModel class  should inherit  ViewModel() class.
 - General operations are done in the view model, then these operations are called from MainActivity
@@ -307,7 +307,7 @@ class MainViewModel:ViewModel() {
 
 ```
 
-### Notes
+### :fire: Notes
 
 #### What is the difference between LiveData and MutableLiveData?
 
@@ -454,5 +454,9 @@ class Repository {
 
 
 ```
+
+### :fire: Notes
+
+- Repo connects with ViewModel, ViewModel connect with (Activity or Fragment)
 
 
