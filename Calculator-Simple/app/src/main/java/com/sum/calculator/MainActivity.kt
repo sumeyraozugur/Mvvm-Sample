@@ -12,22 +12,18 @@ import com.sum.calculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityMainBinding
-    private var number1: Int? = null
-    private var number2: Int? = null
+    private var numberOne: Int? = null
+    private var numberTwo: Int? = null
     private var result: Int? = null
-    private lateinit var toastMessage: String
 
-    companion object{
+    companion object {
         private var isCheck: Boolean = true
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
-
-        toastMessage = "Enter Numbers!!!"
+        setContentView(binding.root)
 
         binding.btnSum.setOnClickListener(this)
         binding.btnSub.setOnClickListener(this)
@@ -58,51 +54,51 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun sumNumbers() {
-        number1 = binding.editNumber1.text.toString().toIntOrNull()
-        number2 = binding.editNumber2.text.toString().toIntOrNull()
-        if (number1 == null || number2 == null) {
-            Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
+        numberOne = binding.editNumber1.text.toString().toIntOrNull()
+        numberTwo = binding.editNumber2.text.toString().toIntOrNull()
+        if (numberOne == null || numberTwo == null) {
+            Toast.makeText(this, "Enter Numbers!!!", Toast.LENGTH_SHORT).show()
         } else {
-            result = (number1!! + number2!!)
+            result = (numberOne!! + numberTwo!!)
             binding.textResult.text = result.toString()
         }
     }
 
     private fun subNumbers() {
-        number1 = binding.editNumber1.text.toString().toIntOrNull()
-        number2 = binding.editNumber2.text.toString().toIntOrNull()
-        if (number1 == null || number2 == null) {
-            Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
+        numberOne = binding.editNumber1.text.toString().toIntOrNull()
+        numberTwo = binding.editNumber2.text.toString().toIntOrNull()
+        if (numberOne == null || numberTwo == null) {
+            Toast.makeText(this,"Enter Numbers!!!", Toast.LENGTH_SHORT).show()
         } else {
-            result = (number1!! - number2!!)
+            result = (numberOne!! - numberTwo!!)
             binding.textResult.text = result.toString()
         }
     }
 
     private fun multiNumbers() {
-        number1 = binding.editNumber1.text.toString().toIntOrNull()
-        number2 = binding.editNumber2.text.toString().toIntOrNull()
-        if (number1 == null || number2 == null) {
-            Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
+        numberOne = binding.editNumber1.text.toString().toIntOrNull()
+        numberTwo = binding.editNumber2.text.toString().toIntOrNull()
+        if (numberOne == null || numberTwo == null) {
+            Toast.makeText(this, "Enter Numbers!!!", Toast.LENGTH_SHORT).show()
         } else {
-            result = (number1!! * number2!!)
+            result = (numberOne!! * numberTwo!!)
             binding.textResult.text = result.toString()
         }
     }
 
     private fun divNumbers() {
-        number1 = binding.editNumber1.text.toString().toIntOrNull()
-        number2 = binding.editNumber2.text.toString().toIntOrNull()
-        if (number1 == null || number2 == null) {
-            Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show()
+        numberOne = binding.editNumber1.text.toString().toIntOrNull()
+        numberTwo = binding.editNumber2.text.toString().toIntOrNull()
+        if (numberOne == null || numberTwo == null) {
+            Toast.makeText(this,"Enter Numbers!!!", Toast.LENGTH_SHORT).show()
         } else {
-            result = (number1!! / number2!!)
+            result = (numberOne!! / numberTwo!!)
             binding.textResult.text = result.toString()
         }
     }
 
     private fun changeTheme() {
-        isCheck = if (isCheck ) {
+        isCheck = if (isCheck) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             false
         } else {

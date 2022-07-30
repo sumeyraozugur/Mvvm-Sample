@@ -44,7 +44,7 @@ class Repository {
         mathResult.value = sum.toString()
     }
 
-    fun controlThem() {
+    fun checkTheme() {
         isCheck.value = if (isCheck.value == true) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             false
@@ -52,6 +52,5 @@ class Repository {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             true
         }
-
     }
 }
